@@ -10,10 +10,12 @@ storage/logs/*
 storage/framework/cache/*
 storage/framework/sessions/*
 storage/framework/views/*
-docker-compose.yml
-Dockerfile
+compose.dev.yaml
+compose.prod.yaml
+.dockerignore
 .env
 .env.*
 tests
 coverage
-
+*.md
+README*
