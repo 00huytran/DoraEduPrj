@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-    <div class="flex min-h-svh items-center justify-end gap-6 bg-muted p-6 md:p-10">
+    <div class="flex min-h-svh items-center justify-end gap-6 bg-muted pl-6 pr-16 md:pl-10 md:pr-24">
         <div class="flex w-full max-w-md flex-col gap-6">
             <Link :href="home()" class="flex items-center gap-2 self-center font-medium">
                 <div class="flex h-9 w-9 items-center justify-center">
