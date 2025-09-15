@@ -30,3 +30,4 @@ yarn-error.log
 /compose.dev.yaml
 /compose.prod.yaml
 /docker-compose.yml
+/compose.local-postgres.yaml
