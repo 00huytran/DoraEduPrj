@@ -82,6 +82,8 @@ defineProps<{
                 Don't have an account?
                 <TextLink :href="register()" :tabindex="5">Sign up</TextLink>
             </div>
+
+            
         </Form>
     </AuthBase>
 </template>

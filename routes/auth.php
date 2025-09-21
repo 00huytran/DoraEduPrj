@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\EmailOtpController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
@@ -33,9 +34,18 @@ Route::middleware('guest')->group(function () {
 
     Route::post('reset-password', [NewPasswordController::class, 'store'])
         ->name('password.store');
+
+    // OTP flow for pending registration (guest only)
+    Route::get('auth/email-otp', [EmailOtpController::class, 'show'])
+        ->name('auth.email-otp');
+    Route::post('auth/email-otp/send', [EmailOtpController::class, 'send'])
+        ->name('auth.email-otp.send');
+    Route::post('auth/email-otp/verify', [EmailOtpController::class, 'verify'])
+        ->name('auth.email-otp.verify');
 });
 
 Route::middleware('auth')->group(function () {
+    // OTP routes are guest-only
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
 
