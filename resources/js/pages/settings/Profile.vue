@@ -69,7 +69,43 @@ const user = page.props.auth.user;
                         />
                         <InputError class="mt-2" :message="errors.email" />
                     </div>
-
+                    <div class="grid gap-2">
+                        <Label for="#">Số điện thoại</Label>
+                        <Input
+                            autocomplete="sdt"
+                            placeholder="Phone Number"
+                        />
+                        <InputError class="mt-2" :message="errors.email" />
+                    </div>
+                    <div class="grid gap-2">
+                        <Label for="#">Ngày sinh</Label>
+                        <Input
+                            autocomplete="sdt"
+                            placeholder="Phone Number"
+                        />
+                        <InputError class="mt-2" :message="errors.email" />
+                    </div>
+                    <div class="grid gap-2">
+                        <Label for="#">Giới tính</Label>
+                        <Input
+                            autocomplete="sdt"
+                            placeholder="Phone Number"
+                        />
+                        <InputError class="mt-2" :message="errors.email" />
+                    </div>
+                    
+                    <div class="grid gap-2">
+                        <Label for="background_image">Ảnh nền</Label>
+                        <Input
+                            id="background_image"
+                            type="file"
+                            accept="image/*"
+                            class="mt-1 block w-full"
+                            name="background_image"
+                        />
+                        <InputError class="mt-2" :message="errors.background_image" />
+                        <p class="text-sm text-muted-foreground">Chọn ảnh nền cho profile của bạn (JPG, PNG, GIF)</p>
+                    </div>
                     <div v-if="mustVerifyEmail && !user.email_verified_at">
                         <p class="-mt-4 text-sm text-muted-foreground">
                             Your email address is unverified.
